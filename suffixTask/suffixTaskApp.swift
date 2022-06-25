@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct suffixTaskApp: App {
+    @State var viewModel = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootTabView()
+                .environmentObject(viewModel)
         }
     }
 }
